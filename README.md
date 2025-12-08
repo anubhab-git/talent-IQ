@@ -71,8 +71,8 @@ npm run dev
 
 ## 🔧 Run the Frontend
 
-```
-bash
+```bash
+
 cd frontend
 npm install
 npm run dev
