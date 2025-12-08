@@ -1,4 +1,7 @@
 export const PROBLEMS = {
+  
+  // easy problems
+  
   "two-sum": {
     id: "two-sum",
     title: "Two Sum",
@@ -212,6 +215,879 @@ print(isPalindrome(" "))  # Expected: True`,
     },
   },
 
+  "best-time-to-buy-and-sell-stock": {
+    id: "best-time-to-buy-and-sell-stock",
+    title: "Best Time to Buy and Sell Stock",
+    difficulty: "Easy",
+    category: "Array • Dynamic Programming",
+    description: {
+      text: "You are given an array prices where prices[i] is the price of a stock on the i-th day. You want to maximize your profit by choosing a single day to buy one stock and choosing a later day to sell that stock.",
+      notes: [
+        "Return the maximum profit you can achieve from this transaction.",
+        "If you cannot achieve any profit, return 0.",
+      ],
+    },
+    examples: [
+      {
+        input: "prices = [7,1,5,3,6,4]",
+        output: "5",
+        explanation: "Buy on day 1 (price = 1) and sell on day 4 (price = 6), profit = 6 - 1 = 5.",
+      },
+      {
+        input: "prices = [7,6,4,3,1]",
+        output: "0",
+        explanation: "No transaction is done, so the maximum profit is 0.",
+      },
+    ],
+    constraints: [
+      "1 ≤ prices.length ≤ 10⁵",
+      "0 ≤ prices[i] ≤ 10⁴",
+    ],
+    starterCode: {
+      javascript: `function maxProfit(prices) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(maxProfit([7,1,5,3,6,4])); // Expected: 5
+console.log(maxProfit([7,6,4,3,1]));   // Expected: 0`,
+      python: `def maxProfit(prices):
+    # Write your solution here
+    pass
+
+# Test cases
+print(maxProfit([7,1,5,3,6,4]))  # Expected: 5
+print(maxProfit([7,6,4,3,1]))    # Expected: 0`,
+      java: `class Solution {
+    public static int maxProfit(int[] prices) {
+        // Write your solution here
+        
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(maxProfit(new int[]{7,1,5,3,6,4})); // Expected: 5
+        System.out.println(maxProfit(new int[]{7,6,4,3,1}));   // Expected: 0
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "5\n0",
+      python: "5\n0",
+      java: "5\n0",
+    },
+  },
+
+  "contains-duplicate": {
+    id: "contains-duplicate",
+    title: "Contains Duplicate",
+    difficulty: "Easy",
+    category: "Array • Hash Table",
+    description: {
+      text: "Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.",
+      notes: [],
+    },
+    examples: [
+      {
+        input: "nums = [1,2,3,1]",
+        output: "true",
+      },
+      {
+        input: "nums = [1,2,3,4]",
+        output: "false",
+      },
+      {
+        input: "nums = [1,1,1,3,3,4,3,2,4,2]",
+        output: "true",
+      },
+    ],
+    constraints: [
+      "1 ≤ nums.length ≤ 10⁵",
+      "-10⁹ ≤ nums[i] ≤ 10⁹",
+    ],
+    starterCode: {
+      javascript: `function containsDuplicate(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(containsDuplicate([1,2,3,1])); // Expected: true
+console.log(containsDuplicate([1,2,3,4])); // Expected: false
+console.log(containsDuplicate([1,1,1,3,3,4,3,2,4,2])); // Expected: true`,
+      python: `def containsDuplicate(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(containsDuplicate([1,2,3,1]))  # Expected: True
+print(containsDuplicate([1,2,3,4]))  # Expected: False
+print(containsDuplicate([1,1,1,3,3,4,3,2,4,2]))  # Expected: True`,
+      java: `class Solution {
+    public static boolean containsDuplicate(int[] nums) {
+        // Write your solution here
+        
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(containsDuplicate(new int[]{1,2,3,1})); // Expected: true
+        System.out.println(containsDuplicate(new int[]{1,2,3,4})); // Expected: false
+        System.out.println(containsDuplicate(new int[]{1,1,1,3,3,4,3,2,4,2})); // Expected: true
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse\ntrue",
+      python: "True\nFalse\nTrue",
+      java: "true\nfalse\ntrue",
+    },
+  },
+
+  "single-number": {
+    id: "single-number",
+    title: "Single Number",
+    difficulty: "Easy",
+    category: "Array • Bit Manipulation",
+    description: {
+      text: "Given a non-empty array of integers nums, every element appears twice except for one. Find and return the element that appears exactly once.",
+      notes: [
+        "You must implement a solution with a linear runtime complexity and use only constant extra space.",
+      ],
+    },
+    examples: [
+      {
+        input: "nums = [2,2,1]",
+        output: "1",
+      },
+      {
+        input: "nums = [4,1,2,1,2]",
+        output: "4",
+      },
+      {
+        input: "nums = [1]",
+        output: "1",
+      },
+    ],
+    constraints: [
+      "1 ≤ nums.length ≤ 3 * 10⁴",
+      "-3 * 10⁴ ≤ nums[i] ≤ 3 * 10⁴",
+      "Each element appears exactly twice except for one element which appears exactly once",
+    ],
+    starterCode: {
+      javascript: `function singleNumber(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(singleNumber([2,2,1]));       // Expected: 1
+console.log(singleNumber([4,1,2,1,2]));   // Expected: 4
+console.log(singleNumber([1]));           // Expected: 1`,
+      python: `def singleNumber(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(singleNumber([2,2,1]))        # Expected: 1
+print(singleNumber([4,1,2,1,2]))    # Expected: 4
+print(singleNumber([1]))            # Expected: 1`,
+      java: `class Solution {
+    public static int singleNumber(int[] nums) {
+        // Write your solution here
+        
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(singleNumber(new int[]{2,2,1}));      // Expected: 1
+        System.out.println(singleNumber(new int[]{4,1,2,1,2}));  // Expected: 4
+        System.out.println(singleNumber(new int[]{1}));          // Expected: 1
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "1\n4\n1",
+      python: "1\n4\n1",
+      java: "1\n4\n1",
+    },
+  },
+
+  "majority-element": {
+    id: "majority-element",
+    title: "Majority Element",
+    difficulty: "Easy",
+    category: "Array • Divide and Conquer",
+    description: {
+      text: "Given an array nums of size n, return the majority element. The majority element is the element that appears more than ⌊n / 2⌋ times.",
+      notes: [
+        "You may assume that the majority element always exists in the array.",
+      ],
+    },
+    examples: [
+      {
+        input: "nums = [3,2,3]",
+        output: "3",
+      },
+      {
+        input: "nums = [2,2,1,1,1,2,2]",
+        output: "2",
+      },
+    ],
+    constraints: [
+      "n == nums.length",
+      "1 ≤ n ≤ 5 * 10⁴",
+      "-10⁹ ≤ nums[i] ≤ 10⁹",
+      "The majority element always exists in the array",
+    ],
+    starterCode: {
+      javascript: `function majorityElement(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(majorityElement([3,2,3]));              // Expected: 3
+console.log(majorityElement([2,2,1,1,1,2,2]));      // Expected: 2`,
+      python: `def majorityElement(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(majorityElement([3,2,3]))               # Expected: 3
+print(majorityElement([2,2,1,1,1,2,2]))       # Expected: 2`,
+      java: `class Solution {
+    public static int majorityElement(int[] nums) {
+        // Write your solution here
+        
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(majorityElement(new int[]{3,2,3}));              // Expected: 3
+        System.out.println(majorityElement(new int[]{2,2,1,1,1,2,2}));      // Expected: 2
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "3\n2",
+      python: "3\n2",
+      java: "3\n2",
+    },
+  },
+
+  "valid-parentheses": {
+    id: "valid-parentheses",
+    title: "Valid Parentheses",
+    difficulty: "Easy",
+    category: "String • Stack",
+    description: {
+      text: "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.",
+      notes: [
+        "An input string is valid if open brackets are closed by the same type of brackets.",
+        "Open brackets must be closed in the correct order.",
+      ],
+    },
+    examples: [
+      {
+        input: 's = "()"',
+        output: "true",
+      },
+      {
+        input: 's = "()[]{}"',
+        output: "true",
+      },
+      {
+        input: 's = "(]"',
+        output: "false",
+      },
+      {
+        input: 's = "([)]"',
+        output: "false",
+      },
+      {
+        input: 's = "{[]}"',
+        output: "true",
+      },
+    ],
+    constraints: [
+      "1 ≤ s.length ≤ 10⁴",
+      "s consists only of parentheses characters '()[]{}'",
+    ],
+    starterCode: {
+      javascript: `function isValid(s) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(isValid("()"));      // Expected: true
+console.log(isValid("()[]{}"));  // Expected: true
+console.log(isValid("(]"));      // Expected: false
+console.log(isValid("([)]"));    // Expected: false
+console.log(isValid("{[]}"));    // Expected: true`,
+      python: `def isValid(s):
+    # Write your solution here
+    pass
+
+# Test cases
+print(isValid("()"))       # Expected: True
+print(isValid("()[]{}"))   # Expected: True
+print(isValid("(]"))       # Expected: False
+print(isValid("([)]"))     # Expected: False
+print(isValid("{[]}"))     # Expected: True`,
+      java: `import java.util.*;
+
+class Solution {
+    public static boolean isValid(String s) {
+        // Write your solution here
+        
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(isValid("()"));       // Expected: true
+        System.out.println(isValid("()[]{}"));   // Expected: true
+        System.out.println(isValid("(]"));       // Expected: false
+        System.out.println(isValid("([)]"));     // Expected: false
+        System.out.println(isValid("{[]}"));     // Expected: true
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\ntrue\nfalse\nfalse\ntrue",
+      python: "True\nTrue\nFalse\nFalse\nTrue",
+      java: "true\ntrue\nfalse\nfalse\ntrue",
+    },
+  },
+
+  "climbing-stairs": {
+    id: "climbing-stairs",
+    title: "Climbing Stairs",
+    difficulty: "Easy",
+    category: "Dynamic Programming",
+    description: {
+      text: "You are climbing a staircase. It takes n steps to reach the top. Each time you can climb either 1 or 2 steps.",
+      notes: [
+        "Given n, return the number of distinct ways you can climb to the top.",
+      ],
+    },
+    examples: [
+      {
+        input: "n = 2",
+        output: "2",
+        explanation: "1 step + 1 step, or 2 steps.",
+      },
+      {
+        input: "n = 3",
+        output: "3",
+        explanation: "1+1+1, 1+2, or 2+1.",
+      },
+    ],
+    constraints: [
+      "1 ≤ n ≤ 45",
+    ],
+    starterCode: {
+      javascript: `function climbStairs(n) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(climbStairs(2)); // Expected: 2
+console.log(climbStairs(3)); // Expected: 3`,
+      python: `def climbStairs(n):
+    # Write your solution here
+    pass
+
+# Test cases
+print(climbStairs(2))  # Expected: 2
+print(climbStairs(3))  # Expected: 3`,
+      java: `class Solution {
+    public static int climbStairs(int n) {
+        // Write your solution here
+        
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(climbStairs(2)); // Expected: 2
+        System.out.println(climbStairs(3)); // Expected: 3
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "2\n3",
+      python: "2\n3",
+      java: "2\n3",
+    },
+  },
+
+  "plus-one": {
+    id: "plus-one",
+    title: "Plus One",
+    difficulty: "Easy",
+    category: "Array • Math",
+    description: {
+      text: "You are given a large integer represented as an integer array digits, where each digits[i] is the i-th digit of the number.",
+      notes: [
+        "Digits are ordered from most significant to least significant.",
+        "Increment the large integer by one and return the resulting array of digits.",
+      ],
+    },
+    examples: [
+      {
+        input: "digits = [1,2,3]",
+        output: "[1,2,4]",
+        explanation: "The integer 123 + 1 becomes 124.",
+      },
+      {
+        input: "digits = [4,3,2,1]",
+        output: "[4,3,2,2]",
+        explanation: "The integer 4321 + 1 becomes 4322.",
+      },
+      {
+        input: "digits = [9]",
+        output: "[1,0]",
+        explanation: "The integer 9 + 1 becomes 10.",
+      },
+    ],
+    constraints: [
+      "1 ≤ digits.length ≤ 100",
+      "0 ≤ digits[i] ≤ 9",
+      "digits does not contain leading zeros unless the number is 0 itself",
+    ],
+    starterCode: {
+      javascript: `function plusOne(digits) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(plusOne([1,2,3])); // Expected: [1,2,4]
+console.log(plusOne([4,3,2,1])); // Expected: [4,3,2,2]
+console.log(plusOne([9])); // Expected: [1,0]`,
+      python: `def plusOne(digits):
+    # Write your solution here
+    pass
+
+# Test cases
+print(plusOne([1,2,3]))      # Expected: [1, 2, 4]
+print(plusOne([4,3,2,1]))    # Expected: [4, 3, 2, 2]
+print(plusOne([9]))          # Expected: [1, 0]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int[] plusOne(int[] digits) {
+        // Write your solution here
+        
+        return new int[0];
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(plusOne(new int[]{1,2,3})));   // Expected: [1, 2, 4]
+        System.out.println(Arrays.toString(plusOne(new int[]{4,3,2,1}))); // Expected: [4, 3, 2, 2]
+        System.out.println(Arrays.toString(plusOne(new int[]{9})));       // Expected: [1, 0]
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[1,2,4]\n[4,3,2,2]\n[1,0]",
+      python: "[1, 2, 4]\n[4, 3, 2, 2]\n[1, 0]",
+      java: "[1, 2, 4]\n[4, 3, 2, 2]\n[1, 0]",
+    },
+  },
+
+  "valid-anagram": {
+    id: "valid-anagram",
+    title: "Valid Anagram",
+    difficulty: "Easy",
+    category: "String • Hash Table",
+    description: {
+      text: "Given two strings s and t, return true if t is an anagram of s, and false otherwise.",
+      notes: [
+        "An anagram is a word or phrase formed by rearranging the letters of another using all original letters exactly once.",
+      ],
+    },
+    examples: [
+      {
+        input: 's = "anagram", t = "nagaram"',
+        output: "true",
+      },
+      {
+        input: 's = "rat", t = "car"',
+        output: "false",
+      },
+    ],
+    constraints: [
+      "1 ≤ s.length, t.length ≤ 5 * 10⁴",
+      "s and t consist of lowercase English letters",
+    ],
+    starterCode: {
+      javascript: `function isAnagram(s, t) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(isAnagram("anagram", "nagaram")); // Expected: true
+console.log(isAnagram("rat", "car"));         // Expected: false`,
+      python: `def isAnagram(s, t):
+    # Write your solution here
+    pass
+
+# Test cases
+print(isAnagram("anagram", "nagaram"))  # Expected: True
+print(isAnagram("rat", "car"))          # Expected: False`,
+      java: `import java.util.*;
+
+class Solution {
+    public static boolean isAnagram(String s, String t) {
+        // Write your solution here
+        
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(isAnagram("anagram", "nagaram")); // Expected: true
+        System.out.println(isAnagram("rat", "car"));         // Expected: false
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse",
+      python: "True\nFalse",
+      java: "true\nfalse",
+    },
+  },
+
+  "merge-two-sorted-lists": {
+  id: "merge-two-sorted-lists",
+  title: "Merge Two Sorted Lists",
+  difficulty: "Easy",
+  category: "Linked List",
+  description: {
+    text: "Merge two sorted linked lists and return the merged list as a sorted list.",
+    notes: [
+      "The returned list should be made by splicing together the nodes of the first two lists."
+    ],
+  },
+  examples: [
+    {
+      input: "list1 = [1,2,4], list2 = [1,3,4]",
+      output: "[1,1,2,3,4,4]",
+    },
+    {
+      input: "list1 = [], list2 = []",
+      output: "[]",
+    },
+    {
+      input: "list1 = [], list2 = [0]",
+      output: "[0]",
+    },
+  ],
+  constraints: [
+    "The number of nodes in both lists is in the range [0, 50]",
+    "-100 ≤ Node.val ≤ 100",
+    "Both list1 and list2 are sorted in non-decreasing order",
+  ],
+  starterCode: {
+    javascript: `function mergeTwoLists(list1, list2) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log( mergeTwoLists([1,2,4], [1,3,4]) ); // Expected: [1,1,2,3,4,4]
+console.log( mergeTwoLists([], []) ); // Expected: []
+console.log( mergeTwoLists([], [0]) ); // Expected: [0]`,
+    python: `def mergeTwoLists(list1, list2):
+    # Write your solution here
+    pass
+
+# Test cases
+print(mergeTwoLists([1,2,4], [1,3,4]))  # Expected: [1,1,2,3,4,4]
+print(mergeTwoLists([], []))           # Expected: []
+print(mergeTwoLists([], [0]))          # Expected: [0]`,
+    java: `import java.util.*;
+
+class Solution {
+    public static List<Integer> mergeTwoLists(List<Integer> list1, List<Integer> list2) {
+        // Write your solution here
+        
+        return new ArrayList<>();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(mergeTwoLists(Arrays.asList(1,2,4), Arrays.asList(1,3,4))); // [1,1,2,3,4,4]
+        System.out.println(mergeTwoLists(Arrays.asList(), Arrays.asList())); // []
+        System.out.println(mergeTwoLists(Arrays.asList(), Arrays.asList(0))); // [0]
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "[1,1,2,3,4,4]\n[]\n[0]",
+    python: "[1, 1, 2, 3, 4, 4]\n[]\n[0]",
+    java: "[1, 1, 2, 3, 4, 4]\n[]\n[0]",
+  },
+  },
+
+  "remove-duplicates-from-sorted-array": {
+  id: "remove-duplicates-from-sorted-array",
+  title: "Remove Duplicates from Sorted Array",
+  difficulty: "Easy",
+  category: "Array • Two Pointers",
+  description: {
+    text: "Remove duplicates in-place so that each element appears only once and return the new length.",
+    notes: [
+      "The relative order of elements should be kept the same.",
+      "Modify the array in-place."
+    ],
+  },
+  examples: [
+    {
+      input: "nums = [1,1,2]",
+      output: "2, nums = [1,2,_]",
+    },
+    {
+      input: "nums = [0,0,1,1,1,2,2,3,3,4]",
+      output: "5, nums = [0,1,2,3,4,_]",
+    }
+  ],
+  constraints: [
+    "1 ≤ nums.length ≤ 3 * 10⁴",
+    "-100 ≤ nums[i] ≤ 100",
+    "nums is sorted in non-decreasing order"
+  ],
+  starterCode: {
+    javascript: `function removeDuplicates(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let arr1 = [1,1,2];
+console.log(removeDuplicates(arr1)); // Expected: 2
+
+let arr2 = [0,0,1,1,1,2,2,3,3,4];
+console.log(removeDuplicates(arr2)); // Expected: 5`,
+    python: `def removeDuplicates(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+arr1 = [1,1,2]
+print(removeDuplicates(arr1))  # Expected: 2
+
+arr2 = [0,0,1,1,1,2,2,3,3,4]
+print(removeDuplicates(arr2))  # Expected: 5`,
+    java: `class Solution {
+    public static int removeDuplicates(int[] nums) {
+        // Write your solution here
+        
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(removeDuplicates(new int[]{1,1,2})); // Expected: 2
+        System.out.println(removeDuplicates(new int[]{0,0,1,1,1,2,2,3,3,4})); // Expected: 5
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "2\n5",
+    python: "2\n5",
+    java: "2\n5",
+  }
+  },
+
+  "intersection-of-two-arrays-ii": {
+  id: "intersection-of-two-arrays-ii",
+  title: "Intersection of Two Arrays II",
+  difficulty: "Easy",
+  category: "Array • Hash Table",
+  description: {
+    text: "Given two arrays, return an array of their intersection where each element appears as many times as it shows in both arrays.",
+      notes: [],
+  },
+  examples: [
+    {
+      input: "nums1 = [1,2,2,1], nums2 = [2,2]",
+      output: "[2,2]"
+    },
+    {
+      input: "nums1 = [4,9,5], nums2 = [9,4,9,8,4]",
+      output: "[4,9]"
+    }
+  ],
+  constraints: [
+    "1 ≤ nums1.length, nums2.length ≤ 1000",
+    "0 ≤ nums1[i], nums2[i] ≤ 1000"
+  ],
+  starterCode: {
+    javascript: `function intersect(nums1, nums2) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(intersect([1,2,2,1], [2,2])); // Expected: [2,2]
+console.log(intersect([4,9,5], [9,4,9,8,4])); // Expected: [4,9]`,
+    python: `def intersect(nums1, nums2):
+    # Write your solution here
+    pass
+
+# Test cases
+print(intersect([1,2,2,1], [2,2]))        # Expected: [2,2]
+print(intersect([4,9,5], [9,4,9,8,4]))    # Expected: [4,9]`,
+    java: `import java.util.*;
+
+class Solution {
+    public static List<Integer> intersect(int[] nums1, int[] nums2) {
+        // Write your solution here
+        
+        return new ArrayList<>();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(intersect(new int[]{1,2,2,1}, new int[]{2,2}));   // [2,2]
+        System.out.println(intersect(new int[]{4,9,5}, new int[]{9,4,9,8,4})); // [4,9]
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "[2,2]\n[4,9]",
+    python: "[2, 2]\n[4, 9]",
+    java: "[2, 2]\n[4, 9]",
+  }
+  },
+
+  "move-zeroes": {
+  id: "move-zeroes",
+  title: "Move Zeroes",
+  difficulty: "Easy",
+  category: "Array • Two Pointers",
+  description: {
+    text: "Move all zeros to the end of the array while maintaining the relative order of non-zero elements.",
+    notes: ["Modify nums in-place."],
+  },
+  examples: [
+    {
+      input: "nums = [0,1,0,3,12]",
+      output: "[1,3,12,0,0]"
+    },
+    {
+      input: "nums = [0]",
+      output: "[0]"
+    }
+  ],
+  constraints: [
+    "1 ≤ nums.length ≤ 10⁴"
+  ],
+  starterCode: {
+    javascript: `function moveZeroes(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let arr = [0,1,0,3,12];
+moveZeroes(arr);
+console.log(arr); // Expected: [1,3,12,0,0]`,
+    python: `def moveZeroes(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+arr = [0,1,0,3,12]
+moveZeroes(arr)
+print(arr)  # Expected: [1,3,12,0,0]`,
+    java: `import java.util.*;
+
+class Solution {
+    public static void moveZeroes(int[] nums) {
+        // Write your solution here
+        
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {0,1,0,3,12};
+        moveZeroes(nums);
+        System.out.println(Arrays.toString(nums)); // [1,3,12,0,0]
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "[1,3,12,0,0]",
+    python: "[1, 3, 12, 0, 0]",
+    java: "[1, 3, 12, 0, 0]",
+  }
+  },
+
+  "palindrome-linked-list": {
+  id: "palindrome-linked-list",
+  title: "Palindrome Linked List",
+  difficulty: "Easy",
+  category: "Linked List • Two Pointers",
+  description: {
+    text: "Given the head of a singly linked list, return true if it is a palindrome.",
+    notes: [],
+  },
+  examples: [
+    {
+      input: "head = [1,2,2,1]",
+      output: "true"
+    },
+    {
+      input: "head = [1,2]",
+      output: "false"
+    }
+  ],
+  constraints: [
+    "1 ≤ number of nodes ≤ 10⁵",
+    "0 ≤ Node.val ≤ 9"
+  ],
+  starterCode: {
+    javascript: `function isPalindromeLinkedList(head) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(isPalindromeLinkedList([1,2,2,1])); // Expected: true
+console.log(isPalindromeLinkedList([1,2]));     // Expected: false`,
+    python: `def isPalindromeLinkedList(head):
+    # Write your solution here
+    pass
+
+# Test cases
+print(isPalindromeLinkedList([1,2,2,1]))  # Expected: True
+print(isPalindromeLinkedList([1,2]))      # Expected: False`,
+    java: `import java.util.*;
+
+class Solution {
+    public static boolean isPalindromeLinkedList(List<Integer> head) {
+        // Write your solution here
+        
+        return false;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isPalindromeLinkedList(Arrays.asList(1,2,2,1))); // true
+        System.out.println(isPalindromeLinkedList(Arrays.asList(1,2)));    // false
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "true\nfalse",
+    python: "True\nFalse",
+    java: "true\nfalse",
+  }
+  },
+
+  // medium problems
+
   "maximum-subarray": {
     id: "maximum-subarray",
     title: "Maximum Subarray",
@@ -337,6 +1213,2347 @@ print(maxArea([1,1]))  # Expected: 1`,
       javascript: "49\n1",
       python: "49\n1",
       java: "49\n1",
+    },
+  },
+
+  "three-sum": {
+  id: "three-sum",
+  title: "3Sum",
+  difficulty: "Medium",
+  category: "Array • Two Pointers",
+  description: {
+    text: "Given an integer array nums, return all triplets [nums[i], nums[j], nums[k]] such that i != j, j != k, and i != k, and nums[i] + nums[j] + nums[k] == 0.",
+    notes: [
+      "The solution set must not contain duplicate triplets."
+    ],
+  },
+  examples: [
+    {
+      input: "nums = [-1,0,1,2,-1,-4]",
+      output: "[[-1,-1,2],[-1,0,1]]"
+    },
+    {
+      input: "nums = [0,1,1]",
+      output: "[]"
+    },
+    {
+      input: "nums = [0,0,0]",
+      output: "[[0,0,0]]"
+    }
+  ],
+  constraints: [
+    "3 ≤ nums.length ≤ 3000",
+    "-10⁵ ≤ nums[i] ≤ 10⁵"
+  ],
+  starterCode: {
+    javascript: `function threeSum(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(threeSum([-1,0,1,2,-1,-4])); // Expected: [[-1,-1,2],[-1,0,1]]
+console.log(threeSum([0,1,1]));          // Expected: []
+console.log(threeSum([0,0,0]));          // Expected: [[0,0,0]]`,
+    python: `def threeSum(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(threeSum([-1,0,1,2,-1,-4]))  # Expected: [[-1,-1,2],[-1,0,1]]
+print(threeSum([0,1,1]))           # Expected: []
+print(threeSum([0,0,0]))           # Expected: [[0,0,0]]`,
+    java: `import java.util.*;
+
+class Solution {
+    public static List<List<Integer>> threeSum(int[] nums) {
+        // Write your solution here
+        
+        return new ArrayList<>();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(threeSum(new int[]{-1,0,1,2,-1,-4})); // [[-1,-1,2],[-1,0,1]]
+        System.out.println(threeSum(new int[]{0,1,1}));          // []
+        System.out.println(threeSum(new int[]{0,0,0}));          // [[0,0,0]]
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "[[-1,-1,2],[-1,0,1]]\n[]\n[[0,0,0]]",
+    python: "[[-1, -1, 2], [-1, 0, 1]]\n[]\n[[0, 0, 0]]",
+    java: "[[-1, -1, 2], [-1, 0, 1]]\n[]\n[[0, 0, 0]]",
+  }
+  },
+
+  "group-anagrams": {
+  id: "group-anagrams",
+  title: "Group Anagrams",
+  difficulty: "Medium",
+  category: "Array • Hash Table • String",
+  description: {
+    text: "Given an array of strings strs, group the anagrams together.",
+    notes: [
+      "You can return the answer in any order."
+    ]
+  },
+  examples: [
+    {
+      input: 'strs = ["eat","tea","tan","ate","nat","bat"]',
+      output: '[["eat","tea","ate"],["tan","nat"],["bat"]]'
+    },
+    {
+      input: 'strs = [""]',
+      output: '[[""]]'
+    },
+    {
+      input: 'strs = ["a"]',
+      output: '[["a"]]'
+    }
+  ],
+  constraints: [
+    "1 ≤ strs.length ≤ 10⁴",
+    "0 ≤ strs[i].length ≤ 100",
+    "strs[i] consists of lowercase English letters"
+  ],
+  starterCode: {
+    javascript: `function groupAnagrams(strs) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(groupAnagrams(["eat","tea","tan","ate","nat","bat"]));
+console.log(groupAnagrams([""]));
+console.log(groupAnagrams(["a"]));`,
+    python: `def groupAnagrams(strs):
+    # Write your solution here
+    pass
+
+# Test cases
+print(groupAnagrams(["eat","tea","tan","ate","nat","bat"]))
+print(groupAnagrams([""]))
+print(groupAnagrams(["a"]))`,
+    java: `import java.util.*;
+
+class Solution {
+    public static List<List<String>> groupAnagrams(String[] strs) {
+        // Write your solution here
+        
+        return new ArrayList<>();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(groupAnagrams(new String[]{"eat","tea","tan","ate","nat","bat"}));
+        System.out.println(groupAnagrams(new String[]{""}));
+        System.out.println(groupAnagrams(new String[]{"a"}));
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: '[["eat","tea","ate"],["tan","nat"],["bat"]]\n[[""]]\n[["a"]]',
+    python: "[['eat', 'tea', 'ate'], ['tan', 'nat'], ['bat']]\n[['']]\n[['a']]",
+    java: "[[eat, tea, ate], [tan, nat], [bat]]\n[[]]\n[[a]]",
+  }
+  },
+
+  "product-of-array-except-self": {
+  id: "product-of-array-except-self",
+  title: "Product of Array Except Self",
+  difficulty: "Medium",
+  category: "Array • Prefix",
+  description: {
+    text: "Return an array answer such that answer[i] is the product of all elements except nums[i].",
+    notes: [
+      "Solve without using division.",
+      "Must run in O(n) time."
+    ],
+  },
+  examples: [
+    {
+      input: "nums = [1,2,3,4]",
+      output: "[24,12,8,6]"
+    },
+    {
+      input: "nums = [-1,1,0,-3,3]",
+      output: "[0,0,9,0,0]"
+    }
+  ],
+  constraints: [
+    "2 ≤ nums.length ≤ 10⁵",
+    "-30 ≤ nums[i] ≤ 30"
+  ],
+  starterCode: {
+    javascript: `function productExceptSelf(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(productExceptSelf([1,2,3,4])); // Expected: [24,12,8,6]
+console.log(productExceptSelf([-1,1,0,-3,3])); // Expected: [0,0,9,0,0]`,
+    python: `def productExceptSelf(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(productExceptSelf([1,2,3,4]))         # Expected: [24, 12, 8, 6]
+print(productExceptSelf([-1,1,0,-3,3]))     # Expected: [0, 0, 9, 0, 0]`,
+    java: `import java.util.*;
+
+class Solution {
+    public static int[] productExceptSelf(int[] nums) {
+        // Write your solution here
+        
+        return new int[0];
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(productExceptSelf(new int[]{1,2,3,4}))); // [24,12,8,6]
+        System.out.println(Arrays.toString(productExceptSelf(new int[]{-1,1,0,-3,3}))); // [0,0,9,0,0]
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "[24,12,8,6]\n[0,0,9,0,0]",
+    python: "[24, 12, 8, 6]\n[0, 0, 9, 0, 0]",
+    java: "[24, 12, 8, 6]\n[0, 0, 9, 0, 0]",
+  }
+  },
+  
+  "sort-colors": {
+  id: "sort-colors",
+  title: "Sort Colors",
+  difficulty: "Medium",
+  category: "Array • Two Pointers",
+  description: {
+    text: "Sort an array containing 0, 1, and 2 using only constant extra space.",
+    notes: ["You must solve it in one pass if possible."],
+  },
+  examples: [
+    {
+      input: "nums = [2,0,2,1,1,0]",
+      output: "[0,0,1,1,2,2]"
+    },
+    {
+      input: "nums = [2,0,1]",
+      output: "[0,1,2]"
+    }
+  ],
+  constraints: [
+    "1 ≤ nums.length ≤ 300",
+    "nums[i] ∈ {0,1,2}"
+  ],
+  starterCode: {
+    javascript: `function sortColors(nums) {
+  // Write your solution here
+  
+}
+
+// Test case
+let arr = [2,0,2,1,1,0];
+sortColors(arr);
+console.log(arr); // Expected: [0,0,1,1,2,2]`,
+    python: `def sortColors(nums):
+    # Write your solution here
+    pass
+
+# Test case
+arr = [2,0,2,1,1,0]
+sortColors(arr)
+print(arr)  # Expected: [0,0,1,1,2,2]`,
+    java: `import java.util.*;
+
+class Solution {
+    public static void sortColors(int[] nums) {
+        // Write your solution here
+        
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {2,0,2,1,1,0};
+        sortColors(arr);
+        System.out.println(Arrays.toString(arr)); // [0,0,1,1,2,2]
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "[0,0,1,1,2,2]",
+    python: "[0, 0, 1, 1, 2, 2]",
+    java: "[0, 0, 1, 1, 2, 2]",
+  }
+  },
+
+  "longest-substring-without-repeating-characters": {
+  id: "longest-substring-without-repeating-characters",
+  title: "Longest Substring Without Repeating Characters",
+  difficulty: "Medium",
+  category: "String • Sliding Window",
+  description: {
+    text: "Given a string s, find the length of the longest substring without repeating characters."
+  },
+  examples: [
+    {
+      input: 's = "abcabcbb"',
+      output: "3",
+      explanation: 'The answer is "abc", with length 3.'
+    },
+    {
+      input: 's = "bbbbb"',
+      output: "1"
+    },
+    {
+      input: 's = "pwwkew"',
+      output: "3"
+    }
+  ],
+  constraints: [
+    "0 ≤ s.length ≤ 5 * 10⁴",
+    "s consists of English letters, digits, symbols and spaces"
+  ],
+  starterCode: {
+    javascript: `function lengthOfLongestSubstring(s) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(lengthOfLongestSubstring("abcabcbb")); // Expected: 3
+console.log(lengthOfLongestSubstring("bbbbb"));    // Expected: 1
+console.log(lengthOfLongestSubstring("pwwkew"));   // Expected: 3`,
+    python: `def lengthOfLongestSubstring(s):
+    # Write your solution here
+    pass
+
+# Test cases
+print(lengthOfLongestSubstring("abcabcbb"))  # Expected: 3
+print(lengthOfLongestSubstring("bbbbb"))     # Expected: 1
+print(lengthOfLongestSubstring("pwwkew"))    # Expected: 3`,
+    java: `class Solution {
+    public static int lengthOfLongestSubstring(String s) {
+        // Write your solution here
+        
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(lengthOfLongestSubstring("abcabcbb")); // 3
+        System.out.println(lengthOfLongestSubstring("bbbbb"));    // 1
+        System.out.println(lengthOfLongestSubstring("pwwkew"));   // 3
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "3\n1\n3",
+    python: "3\n1\n3",
+    java: "3\n1\n3",
+  }
+  },
+
+  "subarray-sum-equals-k": {
+  id: "subarray-sum-equals-k",
+  title: "Subarray Sum Equals K",
+  difficulty: "Medium",
+  category: "Array • Prefix Sum • Hash Table",
+  description: {
+    text: "Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals k."
+  },
+  examples: [
+    {
+      input: "nums = [1,1,1], k = 2",
+      output: "2"
+    },
+    {
+      input: "nums = [1,2,3], k = 3",
+      output: "2"
+    }
+  ],
+  constraints: [
+    "1 ≤ nums.length ≤ 2 * 10⁵",
+    "-1000 ≤ nums[i] ≤ 1000",
+    "-10⁷ ≤ k ≤ 10⁷"
+  ],
+  starterCode: {
+    javascript: `function subarraySum(nums, k) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(subarraySum([1,1,1], 2)); // Expected: 2
+console.log(subarraySum([1,2,3], 3)); // Expected: 2`,
+    python: `def subarraySum(nums, k):
+    # Write your solution here
+    pass
+
+# Test cases
+print(subarraySum([1,1,1], 2))  # Expected: 2
+print(subarraySum([1,2,3], 3))  # Expected: 2`,
+    java: `import java.util.*;
+
+class Solution {
+    public static int subarraySum(int[] nums, int k) {
+        // Write your solution here
+        
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(subarraySum(new int[]{1,1,1}, 2)); // 2
+        System.out.println(subarraySum(new int[]{1,2,3}, 3)); // 2
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "2\n2",
+    python: "2\n2",
+    java: "2\n2",
+  }
+  },
+
+  "spiral-matrix": {
+  id: "spiral-matrix",
+  title: "Spiral Matrix",
+  difficulty: "Medium",
+  category: "Matrix • Simulation",
+  description: {
+    text: "Return all elements of an m x n matrix in spiral order."
+  },
+  examples: [
+    {
+      input: "matrix = [[1,2,3],[4,5,6],[7,8,9]]",
+      output: "[1,2,3,6,9,8,7,4,5]"
+    },
+    {
+      input: "matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]",
+      output: "[1,2,3,4,8,12,11,10,9,5,6,7]"
+    }
+  ],
+  constraints: [
+    "1 ≤ m, n ≤ 10",
+  ],
+  starterCode: {
+    javascript: `function spiralOrder(matrix) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(spiralOrder([[1,2,3],[4,5,6],[7,8,9]]));`,
+    python: `def spiralOrder(matrix):
+    # Write your solution here
+    pass
+
+# Test cases
+print(spiralOrder([[1,2,3],[4,5,6],[7,8,9]]))`,
+    java: `import java.util.*;
+
+class Solution {
+    public static List<Integer> spiralOrder(int[][] matrix) {
+        // Write your solution here
+        
+        return new ArrayList<>();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(spiralOrder(new int[][]{{1,2,3},{4,5,6},{7,8,9}}));
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "[1,2,3,6,9,8,7,4,5]",
+    python: "[1, 2, 3, 6, 9, 8, 7, 4, 5]",
+    java: "[1, 2, 3, 6, 9, 8, 7, 4, 5]",
+  }
+  },
+
+  "set-matrix-zeroes": {
+  id: "set-matrix-zeroes",
+  title: "Set Matrix Zeroes",
+  difficulty: "Medium",
+  category: "Matrix",
+  description: {
+    text: "Given an m x n matrix, if an element is 0, set its entire row and column to 0 in-place.",
+    notes: ["You must do it in-place."],
+  },
+  examples: [
+    {
+      input: "matrix = [[1,1,1],[1,0,1],[1,1,1]]",
+      output: "[[1,0,1],[0,0,0],[1,0,1]]"
+    },
+    {
+      input: "matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]",
+      output: "[[0,0,0,0],[0,4,5,0],[0,3,1,0]]"
+    }
+  ],
+  constraints: [
+    "1 ≤ m, n ≤ 200",
+  ],
+  starterCode: {
+    javascript: `function setZeroes(matrix) {
+  // Write your solution here
+  
+}
+
+// Test case
+const m = [[1,1,1],[1,0,1],[1,1,1]];
+setZeroes(m);
+console.log(m);`,
+    python: `def setZeroes(matrix):
+    # Write your solution here
+    pass
+
+# Test case
+m = [[1,1,1],[1,0,1],[1,1,1]]
+setZeroes(m)
+print(m)`,
+    java: `import java.util.*;
+
+class Solution {
+    public static void setZeroes(int[][] matrix) {
+        // Write your solution here
+        
+    }
+
+    public static void main(String[] args) {
+        int[][] m = {{1,1,1},{1,0,1},{1,1,1}};
+        setZeroes(m);
+        System.out.println(Arrays.deepToString(m));
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "[[1,0,1],[0,0,0],[1,0,1]]",
+    python: "[[1, 0, 1], [0, 0, 0], [1, 0, 1]]",
+    java: "[[1, 0, 1], [0, 0, 0], [1, 0, 1]]",
+  }
+  },
+
+  "generate-parentheses": {
+  id: "generate-parentheses",
+  title: "Generate Parentheses",
+  difficulty: "Medium",
+  category: "Backtracking",
+  description: {
+    text: "Given n pairs of parentheses, generate all combinations of well-formed parentheses."
+  },
+  examples: [
+    {
+      input: "n = 3",
+      output: '["()()()","()(())","(())()","(()())","((()))"]'
+    },
+    {
+      input: "n = 1",
+      output: '["()"]'
+    }
+  ],
+  constraints: [
+    "1 ≤ n ≤ 8"
+  ],
+  starterCode: {
+    javascript: `function generateParenthesis(n) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(generateParenthesis(3));`,
+    python: `def generateParenthesis(n):
+    # Write your solution here
+    pass
+
+# Test cases
+print(generateParenthesis(3))`,
+    java: `import java.util.*;
+
+class Solution {
+    public static List<String> generateParenthesis(int n) {
+        // Write your solution here
+        
+        return new ArrayList<>();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(generateParenthesis(3));
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: '["()()()","()(())","(())()","(()())","((()))"]',
+    python: "['()()()', '()(())', '(())()', '(()())', '((()))']",
+    java: "[()()(), ()(()), (())(), (()()), ((()))]",
+  }
+  },
+
+  "number-of-islands": {
+  id: "number-of-islands",
+  title: "Number of Islands",
+  difficulty: "Medium",
+  category: "Graph • DFS • BFS",
+  description: {
+    text: "Given a 2D grid map of '1's (land) and '0's (water), return the number of islands.",
+    notes: [
+      "An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically."
+    ],
+  },
+  examples: [
+    {
+      input: 'grid = [["1","1","1","1","0"],["1","1","0","1","0"],["1","1","0","0","0"],["0","0","0","0","0"]]',
+      output: "1"
+    },
+    {
+      input: 'grid = [["1","1","0","0","0"],["1","1","0","0","0"],["0","0","1","0","0"],["0","0","0","1","1"]]',
+      output: "3"
+    }
+  ],
+  constraints: [
+    "1 ≤ m, n ≤ 300"
+  ],
+  starterCode: {
+    javascript: `function numIslands(grid) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(numIslands([
+  ["1","1","1","1","0"],
+  ["1","1","0","1","0"],
+  ["1","1","0","0","0"],
+  ["0","0","0","0","0"]
+]));`,
+    python: `def numIslands(grid):
+    # Write your solution here
+    pass
+
+# Test cases
+print(numIslands([
+  ["1","1","1","1","0"],
+  ["1","1","0","1","0"],
+  ["1","1","0","0","0"],
+  ["0","0","0","0","0"]
+]))`,
+    java: `class Solution {
+    public static int numIslands(char[][] grid) {
+        // Write your solution here
+        
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        char[][] g = {
+          {'1','1','1','1','0'},
+          {'1','1','0','1','0'},
+          {'1','1','0','0','0'},
+          {'0','0','0','0','0'}
+        };
+        System.out.println(numIslands(g));
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "1",
+    python: "1",
+    java: "1",
+  }
+  },
+
+  "coin-change": {
+  id: "coin-change",
+  title: "Coin Change",
+  difficulty: "Medium",
+  category: "Dynamic Programming",
+  description: {
+    text: "Given coins of different denominations and a total amount, return the fewest coins needed to make that amount.",
+    notes: [
+      "Return -1 if the amount cannot be made."
+    ]
+  },
+  examples: [
+    {
+      input: "coins = [1,2,5], amount = 11",
+      output: "3",
+      explanation: "11 = 5 + 5 + 1"
+    },
+    {
+      input: "coins = [2], amount = 3",
+      output: "-1"
+    },
+    {
+      input: "coins = [1], amount = 0",
+      output: "0"
+    }
+  ],
+  constraints: [
+    "1 ≤ coins.length ≤ 12",
+    "1 ≤ amount ≤ 10⁴"
+  ],
+  starterCode: {
+    javascript: `function coinChange(coins, amount) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(coinChange([1,2,5], 11)); // Expected: 3`,
+    python: `def coinChange(coins, amount):
+    # Write your solution here
+    pass
+
+# Test cases
+print(coinChange([1,2,5], 11))  # Expected: 3`,
+    java: `class Solution {
+    public static int coinChange(int[] coins, int amount) {
+        // Write your solution here
+        
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(coinChange(new int[]{1,2,5}, 11)); // 3
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "3",
+    python: "3",
+    java: "3",
+  }
+  },
+
+  "longest-increasing-subsequence": {
+  id: "longest-increasing-subsequence",
+  title: "Longest Increasing Subsequence",
+  difficulty: "Medium",
+  category: "Dynamic Programming • Binary Search",
+  description: {
+    text: "Return the length of the longest strictly increasing subsequence."
+  },
+  examples: [
+    {
+      input: "nums = [10,9,2,5,3,7,101,18]",
+      output: "4"
+    },
+    {
+      input: "nums = [0,1,0,3,2,3]",
+      output: "4"
+    },
+    {
+      input: "nums = [7,7,7,7,7,7,7]",
+      output: "1"
+    }
+  ],
+  constraints: [
+    "1 ≤ nums.length ≤ 2500",
+    "-10⁴ ≤ nums[i] ≤ 10⁴"
+  ],
+  starterCode: {
+    javascript: `function lengthOfLIS(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(lengthOfLIS([10,9,2,5,3,7,101,18])); // Expected: 4`,
+    python: `def lengthOfLIS(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(lengthOfLIS([10,9,2,5,3,7,101,18]))  # Expected: 4`,
+    java: `class Solution {
+    public static int lengthOfLIS(int[] nums) {
+        // Write your solution here
+        
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(lengthOfLIS(new int[]{10,9,2,5,3,7,101,18})); // 4
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "4",
+    python: "4",
+    java: "4",
+  }
+  },
+
+  "house-robber": {
+  id: "house-robber",
+  title: "House Robber",
+  difficulty: "Medium",
+  category: "Dynamic Programming",
+  description: {
+    text: "You cannot rob adjacent houses. Return the maximum money you can rob."
+  },
+  examples: [
+    {
+      input: "nums = [1,2,3,1]",
+      output: "4"
+    },
+    {
+      input: "nums = [2,7,9,3,1]",
+      output: "12"
+    }
+  ],
+  constraints: [
+    "1 ≤ nums.length ≤ 100",
+    "0 ≤ nums[i] ≤ 400"
+  ],
+  starterCode: {
+    javascript: `function rob(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(rob([1,2,3,1])); // Expected: 4`,
+    python: `def rob(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(rob([1,2,3,1]))  # Expected: 4`,
+    java: `class Solution {
+    public static int rob(int[] nums) {
+        // Write your solution here
+        
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(rob(new int[]{1,2,3,1})); // 4
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "4",
+    python: "4",
+    java: "4",
+  }
+  },
+
+  "house-robber-ii": {
+  id: "house-robber-ii",
+  title: "House Robber II",
+  difficulty: "Medium",
+  category: "Dynamic Programming",
+  description: {
+    text: "You cannot rob adjacent houses, and the first and last houses are also adjacent."
+  },
+  examples: [
+    {
+      input: "nums = [2,3,2]",
+      output: "3"
+    },
+    {
+      input: "nums = [1,2,3,1]",
+      output: "4"
+    }
+  ],
+  constraints: [
+    "1 ≤ nums.length ≤ 100",
+    "0 ≤ nums[i] ≤ 1000"
+  ],
+  starterCode: {
+    javascript: `function robCircular(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(robCircular([2,3,2])); // Expected: 3`,
+    python: `def robCircular(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(robCircular([2,3,2]))  # Expected: 3`,
+    java: `class Solution {
+    public static int robCircular(int[] nums) {
+        // Write your solution here
+        
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(robCircular(new int[]{2,3,2})); // 3
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "3",
+    python: "3",
+    java: "3",
+  }
+  },
+
+  "decode-ways": {
+  id: "decode-ways",
+  title: "Decode Ways",
+  difficulty: "Medium",
+  category: "Dynamic Programming",
+  description: {
+    text: "Given a string containing digits, return the number of ways to decode it (A=1, B=2, ..., Z=26)."
+  },
+  examples: [
+    {
+      input: 's = "12"',
+      output: "2",
+      explanation: '"AB" and "L"'
+    },
+    {
+      input: 's = "226"',
+      output: "3"
+    },
+    {
+      input: 's = "06"',
+      output: "0"
+    }
+  ],
+  constraints: [
+    "1 ≤ s.length ≤ 100",
+    "s contains only digits"
+  ],
+  starterCode: {
+    javascript: `function numDecodings(s) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(numDecodings("12"));`,
+    python: `def numDecodings(s):
+    # Write your solution here
+    pass
+
+# Test cases
+print(numDecodings("12"))`,
+    java: `class Solution {
+    public static int numDecodings(String s) {
+        // Write your solution here
+        
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(numDecodings("12")); // 2
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "2",
+    python: "2",
+    java: "2",
+  }
+  },
+
+  "find-first-and-last-position": {
+  id: "find-first-and-last-position",
+  title: "Find First and Last Position of Element in Sorted Array",
+  difficulty: "Medium",
+  category: "Array • Binary Search",
+  description: {
+    text: "Given a sorted array nums, return the starting and ending position of a given target value. If not found, return [-1, -1]."
+  },
+  examples: [
+    {
+      input: "nums = [5,7,7,8,8,10], target = 8",
+      output: "[3,4]"
+    },
+    {
+      input: "nums = [5,7,7,8,8,10], target = 6",
+      output: "[-1,-1]"
+    },
+    {
+      input: "nums = [], target = 0",
+      output: "[-1,-1]"
+    }
+  ],
+  constraints: [
+    "0 ≤ nums.length ≤ 10⁵",
+    "-10⁹ ≤ nums[i], target ≤ 10⁹"
+  ],
+  starterCode: {
+    javascript: `function searchRange(nums, target) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(searchRange([5,7,7,8,8,10], 8)); // Expected: [3,4]
+console.log(searchRange([5,7,7,8,8,10], 6)); // Expected: [-1,-1]`,
+    python: `def searchRange(nums, target):
+    # Write your solution here
+    pass
+
+# Test cases
+print(searchRange([5,7,7,8,8,10], 8))  # Expected: [3,4]
+print(searchRange([5,7,7,8,8,10], 6))  # Expected: [-1,-1]`,
+    java: `import java.util.*;
+
+class Solution {
+    public static int[] searchRange(int[] nums, int target) {
+        // Write your solution here
+        
+        return new int[]{-1, -1};
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(searchRange(new int[]{5,7,7,8,8,10}, 8))); // [3,4]
+        System.out.println(Arrays.toString(searchRange(new int[]{5,7,7,8,8,10}, 6))); // [-1,-1]
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "[3,4]\n[-1,-1]",
+    python: "[3, 4]\n[-1, -1]",
+    java: "[3, 4]\n[-1, -1]",
+  }
+  },
+
+  "k-closest-points": {
+  id: "k-closest-points",
+  title: "K Closest Points to Origin",
+  difficulty: "Medium",
+  category: "Heap • Sorting",
+  description: {
+    text: "Given an array of points and an integer k, return the k closest points to the origin (0,0)."
+  },
+  examples: [
+    {
+      input: "points = [[1,3],[-2,2]], k = 1",
+      output: "[[-2,2]]"
+    },
+    {
+      input: "points = [[3,3],[5,-1],[-2,4]], k = 2",
+      output: "[[3,3],[-2,4]]"
+    }
+  ],
+  constraints: [
+    "1 ≤ k ≤ points.length ≤ 10⁴",
+    "-10⁴ ≤ points[i][0], points[i][1] ≤ 10⁴"
+  ],
+  starterCode: {
+    javascript: `function kClosest(points, k) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(kClosest([[1,3],[-2,2]], 1));`,
+    python: `def kClosest(points, k):
+    # Write your solution here
+    pass
+
+# Test cases
+print(kClosest([[1,3],[-2,2]], 1))`,
+    java: `import java.util.*;
+
+class Solution {
+    public static int[][] kClosest(int[][] points, int k) {
+        // Write your solution here
+        
+        return new int[0][0];
+    }
+
+    public static void main(String[] args) {
+        int[][] res = kClosest(new int[][]{{1,3},{-2,2}}, 1);
+        System.out.println(Arrays.deepToString(res));
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "[[-2,2]]",
+    python: "[[-2, 2]]",
+    java: "[[-2, 2]]",
+  }
+  },
+
+  "rotate-image": {
+  id: "rotate-image",
+  title: "Rotate Image",
+  difficulty: "Medium",
+  category: "Matrix • Simulation",
+  description: {
+    text: "Rotate an n x n matrix by 90 degrees clockwise in-place."
+  },
+  examples: [
+    {
+      input: "matrix = [[1,2,3],[4,5,6],[7,8,9]]",
+      output: "[[7,4,1],[8,5,2],[9,6,3]]"
+    },
+    {
+      input: "matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]",
+      output: "[[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]"
+    }
+  ],
+  constraints: [
+    "n == matrix.length",
+    "n == matrix[i].length",
+    "1 ≤ n ≤ 20",
+  ],
+  starterCode: {
+    javascript: `function rotate(matrix) {
+  // Write your solution here
+  
+}
+
+// Test case
+let m = [[1,2,3],[4,5,6],[7,8,9]];
+rotate(m);
+console.log(m);`,
+    python: `def rotate(matrix):
+    # Write your solution here
+    pass
+
+# Test case
+m = [[1,2,3],[4,5,6],[7,8,9]]
+rotate(m)
+print(m)`,
+    java: `import java.util.*;
+
+class Solution {
+    public static void rotate(int[][] matrix) {
+        // Write your solution here
+        
+    }
+
+    public static void main(String[] args) {
+        int[][] m = {{1,2,3},{4,5,6},{7,8,9}};
+        rotate(m);
+        System.out.println(Arrays.deepToString(m));
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "[[7,4,1],[8,5,2],[9,6,3]]",
+    python: "[[7, 4, 1], [8, 5, 2], [9, 6, 3]]",
+    java: "[[7, 4, 1], [8, 5, 2], [9, 6, 3]]",
+  }
+  },
+
+  "binary-tree-level-order-traversal": {
+  id: "binary-tree-level-order-traversal",
+  title: "Binary Tree Level Order Traversal",
+  difficulty: "Medium",
+  category: "Tree • BFS",
+  description: {
+    text: "Return the level order traversal of a binary tree as a list of lists."
+  },
+  examples: [
+    {
+      input: "root = [3,9,20,null,null,15,7]",
+      output: "[[3],[9,20],[15,7]]"
+    },
+    {
+      input: "root = [1]",
+      output: "[[1]]"
+    },
+    {
+      input: "root = []",
+      output: "[]"
+    }
+  ],
+  constraints: [
+    "0 ≤ number of nodes ≤ 2000",
+    "-1000 ≤ Node.val ≤ 1000"
+  ],
+  starterCode: {
+    javascript: `function levelOrder(root) {
+  // Write your solution here
+  
+}
+
+// Test case
+console.log(levelOrder([3,9,20,null,null,15,7]));`,
+    python: `def levelOrder(root):
+    # Write your solution here
+    pass
+
+# Test case
+print(levelOrder([3,9,20,None,None,15,7]))`,
+    java: `import java.util.*;
+
+class Solution {
+    public static List<List<Integer>> levelOrder(List<Integer> root) {
+        // Write your solution here
+        
+        return new ArrayList<>();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(levelOrder(Arrays.asList(3,9,20,null,null,15,7)));
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "[[3],[9,20],[15,7]]",
+    python: "[[3], [9, 20], [15, 7]]",
+    java: "[[3], [9, 20], [15, 7]]",
+  }
+  },
+
+  "permutations": {
+  id: "permutations",
+  title: "Permutations",
+  difficulty: "Medium",
+  category: "Backtracking",
+  description: {
+    text: "Given an array nums of distinct integers, return all possible permutations."
+  },
+  examples: [
+    {
+      input: "nums = [1,2,3]",
+      output: "[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]"
+    },
+    {
+      input: "nums = [0,1]",
+      output: "[[0,1],[1,0]]"
+    }
+  ],
+  constraints: [
+    "1 ≤ nums.length ≤ 6",
+    "-10 ≤ nums[i] ≤ 10",
+    "All nums are unique"
+  ],
+  starterCode: {
+    javascript: `function permute(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(permute([1,2,3]));`,
+    python: `def permute(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(permute([1,2,3]))`,
+    java: `import java.util.*;
+
+class Solution {
+    public static List<List<Integer>> permute(int[] nums) {
+        // Write your solution here
+        
+        return new ArrayList<>();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(permute(new int[]{1,2,3}));
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]",
+    python: "[[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]",
+    java: "[[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]",
+  }
+  },
+
+  // hard problems
+
+  "median-of-two-sorted-arrays": {
+  id: "median-of-two-sorted-arrays",
+  title: "Median of Two Sorted Arrays",
+  difficulty: "Hard",
+  category: "Array • Binary Search • Divide & Conquer",
+  description: {
+    text: "Given two sorted arrays nums1 and nums2, return the median of the two sorted arrays.",
+    notes: [
+      "The overall run time complexity must be O(log (m+n))."
+    ]
+  },
+  examples: [
+    {
+      input: "nums1 = [1,3], nums2 = [2]",
+      output: "2.0"
+    },
+    {
+      input: "nums1 = [1,2], nums2 = [3,4]",
+      output: "2.5"
+    }
+  ],
+  constraints: [
+    "nums1.length == m",
+    "nums2.length == n",
+    "0 ≤ m, n ≤ 1000",
+    "1 ≤ m + n ≤ 2000",
+    "-10⁶ ≤ nums1[i], nums2[i] ≤ 10⁶"
+  ],
+  starterCode: {
+    javascript: `function findMedianSortedArrays(nums1, nums2) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(findMedianSortedArrays([1,3], [2])); // Expected: 2
+console.log(findMedianSortedArrays([1,2], [3,4])); // Expected: 2.5`,
+    python: `def findMedianSortedArrays(nums1, nums2):
+    # Write your solution here
+    pass
+
+# Test cases
+print(findMedianSortedArrays([1,3], [2]))  # Expected: 2
+print(findMedianSortedArrays([1,2], [3,4]))  # Expected: 2.5`,
+    java: `class Solution {
+    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        // Write your solution here
+        
+        return 0.0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(findMedianSortedArrays(new int[]{1,3}, new int[]{2})); // 2
+        System.out.println(findMedianSortedArrays(new int[]{1,2}, new int[]{3,4})); // 2.5
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "2\n2.5",
+    python: "2\n2.5",
+    java: "2.0\n2.5",
+  }
+  },
+
+  "merge-k-sorted-lists": {
+  id: "merge-k-sorted-lists",
+  title: "Merge k Sorted Lists",
+  difficulty: "Hard",
+  category: "Linked List • Heap • Divide & Conquer",
+  description: {
+    text: "Merge k sorted linked lists and return it as one sorted linked list.",
+    notes: []
+  },
+  examples: [
+    {
+      input: "lists = [[1,4,5],[1,3,4],[2,6]]",
+      output: "[1,1,2,3,4,4,5,6]"
+    },
+    {
+      input: "lists = []",
+      output: "[]"
+    },
+    {
+      input: "lists = [[]]",
+      output: "[]"
+    }
+  ],
+  constraints: [
+    "k == lists.length",
+    "0 ≤ k ≤ 10⁴",
+    "0 ≤ lists[i].length ≤ 500",
+    "-10⁴ ≤ Node.val ≤ 10⁴",
+    "Total nodes ≤ 10⁵"
+  ],
+  starterCode: {
+    javascript: `function mergeKLists(lists) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(mergeKLists([[1,4,5],[1,3,4],[2,6]])); // Expected: [1,1,2,3,4,4,5,6]`,
+    python: `def mergeKLists(lists):
+    # Write your solution here
+    pass
+
+# Test cases
+print(mergeKLists([[1,4,5],[1,3,4],[2,6]]))  # Expected: [1,1,2,3,4,4,5,6]`,
+    java: `import java.util.*;
+
+class Solution {
+    public static List<Integer> mergeKLists(List<List<Integer>> lists) {
+        // Write your solution here
+        
+        return new ArrayList<>();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(mergeKLists(Arrays.asList(
+            Arrays.asList(1,4,5),
+            Arrays.asList(1,3,4),
+            Arrays.asList(2,6)
+        )));
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "[1,1,2,3,4,4,5,6]",
+    python: "[1, 1, 2, 3, 4, 4, 5, 6]",
+    java: "[1, 1, 2, 3, 4, 4, 5, 6]",
+  }
+  },
+
+  "trapping-rain-water": {
+  id: "trapping-rain-water",
+  title: "Trapping Rain Water",
+  difficulty: "Hard",
+  category: "Array • Two Pointers • Stack",
+  description: {
+    text: "Given n non-negative integers representing elevation heights, compute how much water it can trap."
+  },
+  examples: [
+    {
+      input: "height = [0,1,0,2,1,0,1,3,2,1,2,1]",
+      output: "6"
+    },
+    {
+      input: "height = [4,2,0,3,2,5]",
+      output: "9"
+    }
+  ],
+  constraints: [
+    "n == height.length",
+    "1 ≤ n ≤ 2 * 10⁴",
+    "0 ≤ height[i] ≤ 10⁵"
+  ],
+  starterCode: {
+    javascript: `function trap(height) {
+  // Write your solution here
+  
+}
+
+console.log(trap([0,1,0,2,1,0,1,3,2,1,2,1])); // Expected: 6`,
+    python: `def trap(height):
+    # Write your solution here
+    pass
+
+print(trap([0,1,0,2,1,0,1,3,2,1,2,1]))  # Expected: 6`,
+    java: `class Solution {
+    public static int trap(int[] height) {
+        // Write your solution here
+        
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(trap(new int[]{0,1,0,2,1,0,1,3,2,1,2,1})); // 6
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "6",
+    python: "6",
+    java: "6",
+  }
+  },
+
+  "word-ladder": {
+  id: "word-ladder",
+  title: "Word Ladder",
+  difficulty: "Hard",
+  category: "Graph • BFS",
+  description: {
+    text: "Return the length of the shortest transformation sequence from beginWord to endWord.",
+    notes: [
+      "Only one letter can be changed at a time.",
+      "Each new word must exist in the wordList."
+    ]
+  },
+  examples: [
+    {
+      input: 'beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log","cog"]',
+      output: "5"
+    },
+    {
+      input: 'beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log"]',
+      output: "0"
+    }
+  ],
+  constraints: [
+    "1 ≤ wordList.length ≤ 5000",
+    "wordList[i].length == beginWord.length",
+    "Only lowercase letters"
+  ],
+  starterCode: {
+    javascript: `function ladderLength(beginWord, endWord, wordList) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(ladderLength("hit", "cog", ["hot","dot","dog","lot","log","cog"])); // Expected: 5`,
+    python: `def ladderLength(beginWord, endWord, wordList):
+    # Write your solution here
+    pass
+
+print(ladderLength("hit", "cog", ["hot","dot","dog","lot","log","cog"]))`,
+    java: `import java.util.*;
+
+class Solution {
+    public static int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        // Write your solution here
+        
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(ladderLength("hit","cog",Arrays.asList("hot","dot","dog","lot","log","cog"))); // 5
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "5",
+    python: "5",
+    java: "5",
+  }
+  },
+
+  "n-queens": {
+  id: "n-queens",
+  title: "N-Queens",
+  difficulty: "Hard",
+  category: "Backtracking",
+  description: {
+    text: "Place n queens on an n×n chessboard so that no two queens attack each other.",
+    notes: [
+      "Return all distinct board configurations."
+    ]
+  },
+  examples: [
+    {
+      input: "n = 4",
+      output: '[[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]'
+    }
+  ],
+  constraints: [
+    "1 ≤ n ≤ 9"
+  ],
+  starterCode: {
+    javascript: `function solveNQueens(n) {
+  // Write your solution here
+  
+}
+
+// Test case
+console.log(solveNQueens(4));`,
+    python: `def solveNQueens(n):
+    # Write your solution here
+    pass
+
+print(solveNQueens(4))`,
+    java: `import java.util.*;
+
+class Solution {
+    public static List<List<String>> solveNQueens(int n) {
+        // Write your solution here
+        
+        return new ArrayList<>();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(solveNQueens(4));
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: '[[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]',
+    python: '[[".Q..", "...Q", "Q...", "..Q."], ["..Q.", "Q...", "...Q", ".Q.."]]',
+    java: "[[.Q.., ...Q, Q..., ..Q.], [..Q., Q..., ...Q, .Q..]]",
+  }
+  },
+
+  "longest-valid-parentheses": {
+  id: "longest-valid-parentheses",
+  title: "Longest Valid Parentheses",
+  difficulty: "Hard",
+  category: "String • Stack • Dynamic Programming",
+  description: {
+    text: "Given a string containing only '(' and ')', return the length of the longest valid parentheses substring."
+  },
+  examples: [
+    {
+      input: 's = "(()"',
+      output: "2"
+    },
+    {
+      input: 's = ")()())"',
+      output: "4"
+    }
+  ],
+  constraints: [
+    "0 ≤ s.length ≤ 30,000"
+  ],
+  starterCode: {
+    javascript: `function longestValidParentheses(s) {
+  // Write your solution here
+  
+}
+
+console.log(longestValidParentheses("(()"));    // Expected: 2`,
+    python: `def longestValidParentheses(s):
+    # Write your solution here
+    pass
+
+print(longestValidParentheses("(()"))  # Expected: 2`,
+    java: `class Solution {
+    public static int longestValidParentheses(String s) {
+        // Write your solution here
+        
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(longestValidParentheses("(()")); // 2
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "2",
+    python: "2",
+    java: "2",
+  }
+  },
+
+  "sliding-window-maximum": {
+  id: "sliding-window-maximum",
+  title: "Sliding Window Maximum",
+  difficulty: "Hard",
+  category: "Array • Sliding Window • Deque",
+  description: {
+    text: "Given an array nums and a sliding window of size k, return the maximum value in each window."
+  },
+  examples: [
+    {
+      input: "nums = [1,3,-1,-3,5,3,6,7], k = 3",
+      output: "[3,3,5,5,6,7]"
+    },
+    {
+      input: "nums = [1], k = 1",
+      output: "[1]"
+    }
+  ],
+  constraints: [
+    "1 ≤ nums.length ≤ 10⁵",
+    "-10⁹ ≤ nums[i] ≤ 10⁹",
+    "1 ≤ k ≤ nums.length"
+  ],
+  starterCode: {
+    javascript: `function maxSlidingWindow(nums, k) {
+  // Write your solution here
+  
+}
+
+console.log(maxSlidingWindow([1,3,-1,-3,5,3,6,7], 3));`,
+    python: `def maxSlidingWindow(nums, k):
+    # Write your solution here
+    pass
+
+print(maxSlidingWindow([1,3,-1,-3,5,3,6,7], 3))`,
+    java: `import java.util.*;
+
+class Solution {
+    public static int[] maxSlidingWindow(int[] nums, int k) {
+        // Write your solution here
+        
+        return new int[0];
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(maxSlidingWindow(
+          new int[]{1,3,-1,-3,5,3,6,7}, 3)));
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "[3,3,5,5,6,7]",
+    python: "[3, 3, 5, 5, 6, 7]",
+    java: "[3, 3, 5, 5, 6, 7]",
+  }
+  },
+
+  "minimum-window-substring": {
+  id: "minimum-window-substring",
+  title: "Minimum Window Substring",
+  difficulty: "Hard",
+  category: "String • Sliding Window • Hash Table",
+  description: {
+    text: "Given strings s and t, return the smallest substring of s that contains all characters in t."
+  },
+  examples: [
+    {
+      input: 's = "ADOBECODEBANC", t = "ABC"',
+      output: '"BANC"'
+    },
+    {
+      input: 's = "a", t = "a"',
+      output: '"a"'
+    },
+    {
+      input: 's = "a", t = "aa"',
+      output: '""'
+    }
+  ],
+  constraints: [
+    "1 ≤ s.length, t.length ≤ 10⁵",
+    "s and t consist of uppercase/lowercase English letters"
+  ],
+  starterCode: {
+    javascript: `function minWindow(s, t) {
+  // Write your solution here
+  
+}
+
+console.log(minWindow("ADOBECODEBANC", "ABC"));`,
+    python: `def minWindow(s, t):
+    # Write your solution here
+    pass
+
+print(minWindow("ADOBECODEBANC", "ABC"))`,
+    java: `class Solution {
+    public static String minWindow(String s, String t) {
+        // Write your solution here
+        
+        return "";
+    }
+
+    public static void main(String[] args) {
+        System.out.println(minWindow("ADOBECODEBANC", "ABC"));
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "BANC",
+    python: "BANC",
+    java: "BANC",
+  }
+  },
+
+  "largest-rectangle-in-histogram": {
+  id: "largest-rectangle-in-histogram",
+  title: "Largest Rectangle in Histogram",
+  difficulty: "Hard",
+  category: "Stack • Array",
+  description: {
+    text: "Given an array of heights representing histogram bars, return the area of the largest rectangle."
+  },
+  examples: [
+    {
+      input: "heights = [2,1,5,6,2,3]",
+      output: "10"
+    },
+    {
+      input: "heights = [2,4]",
+      output: "4"
+    }
+  ],
+  constraints: [
+    "1 ≤ heights.length ≤ 10⁵",
+    "0 ≤ heights[i] ≤ 10⁶"
+  ],
+  starterCode: {
+    javascript: `function largestRectangleArea(heights) {
+  // Write your solution here
+  
+}
+
+console.log(largestRectangleArea([2,1,5,6,2,3])); // Expected: 10`,
+    python: `def largestRectangleArea(heights):
+    # Write your solution here
+    pass
+
+print(largestRectangleArea([2,1,5,6,2,3]))  # Expected: 10`,
+    java: `class Solution {
+    public static int largestRectangleArea(int[] heights) {
+        // Write your solution here
+        
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(largestRectangleArea(new int[]{2,1,5,6,2,3})); // 10
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "10",
+    python: "10",
+    java: "10",
+  }
+  },
+
+  "merge-intervals": {
+  id: "merge-intervals",
+  title: "Merge Intervals",
+  difficulty: "Hard",
+  category: "Array • Sorting",
+  description: {
+    text: "Given an array of intervals, merge all overlapping intervals."
+  },
+  examples: [
+    {
+      input: "intervals = [[1,3],[2,6],[8,10],[15,18]]",
+      output: "[[1,6],[8,10],[15,18]]"
+    },
+    {
+      input: "intervals = [[1,4],[4,5]]",
+      output: "[[1,5]]"
+    }
+  ],
+  constraints: [
+    "1 ≤ intervals.length ≤ 10⁴",
+    "intervals[i].length == 2"
+  ],
+  starterCode: {
+    javascript: `function merge(intervals) {
+  // Write your solution here
+  
+}
+
+console.log(merge([[1,3],[2,6],[8,10],[15,18]]));`,
+    python: `def merge(intervals):
+    # Write your solution here
+    pass
+
+print(merge([[1,3],[2,6],[8,10],[15,18]]))`,
+    java: `import java.util.*;
+
+class Solution {
+    public static int[][] merge(int[][] intervals) {
+        // Write your solution here
+        
+        return new int[0][0];
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.deepToString(merge(new int[][]{
+            {1,3},{2,6},{8,10},{15,18}
+        })));
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "[[1,6],[8,10],[15,18]]",
+    python: "[[1, 6], [8, 10], [15, 18]]",
+    java: "[[1, 6], [8, 10], [15, 18]]",
+  }
+  },
+
+  "edit-distance": {
+  id: "edit-distance",
+  title: "Edit Distance",
+  difficulty: "Hard",
+  category: "Dynamic Programming",
+  description: {
+    text: "Given two strings word1 and word2, return the minimum number of operations (insert, delete, replace) to convert word1 into word2."
+  },
+  examples: [
+    {
+      input: 'word1 = "horse", word2 = "ros"',
+      output: "3"
+    },
+    {
+      input: 'word1 = "intention", word2 = "execution"',
+      output: "5"
+    }
+  ],
+  constraints: [
+    "0 ≤ word1.length, word2.length ≤ 500",
+    "word1 and word2 consist of lowercase English letters"
+  ],
+  starterCode: {
+    javascript: `function minDistance(word1, word2) {
+  // Write your solution here
+  
+}
+
+console.log(minDistance("horse", "ros")); // Expected: 3`,
+    python: `def minDistance(word1, word2):
+    # Write your solution here
+    pass
+
+print(minDistance("horse", "ros"))  # Expected: 3`,
+    java: `class Solution {
+    public static int minDistance(String word1, String word2) {
+        // Write your solution here
+        
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(minDistance("horse", "ros")); // 3
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "3",
+    python: "3",
+    java: "3",
+  }
+  },
+
+  "regular-expression-matching": {
+  id: "regular-expression-matching",
+  title: "Regular Expression Matching",
+  difficulty: "Hard",
+  category: "Dynamic Programming • String",
+  description: {
+    text: "Implement regular expression matching supporting '.' and '*' according to typical regex rules."
+  },
+  examples: [
+    {
+      input: 's = "aa", p = "a"',
+      output: "false"
+    },
+    {
+      input: 's = "aa", p = "a*"',
+      output: "true"
+    },
+    {
+      input: 's = "ab", p = ".*"',
+      output: "true"
+    }
+  ],
+  constraints: [
+    "1 ≤ s.length ≤ 20",
+    "1 ≤ p.length ≤ 30"
+  ],
+  starterCode: {
+    javascript: `function isMatch(s, p) {
+  // Write your solution here
+  
+}
+
+console.log(isMatch("aa", "a"));   // false
+console.log(isMatch("aa", "a*"));  // true`,
+    python: `def isMatch(s, p):
+    # Write your solution here
+    pass
+
+print(isMatch("aa", "a"))   # False
+print(isMatch("aa", "a*"))  # True`,
+    java: `class Solution {
+    public static boolean isMatch(String s, String p) {
+        // Write your solution here
+        
+        return false;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isMatch("aa", "a"));   // false
+        System.out.println(isMatch("aa", "a*"));  // true
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "false\ntrue",
+    python: "False\nTrue",
+    java: "false\ntrue",
+  }
+  },
+
+  "sudoku-solver": {
+  id: "sudoku-solver",
+  title: "Sudoku Solver",
+  difficulty: "Hard",
+  category: "Backtracking",
+  description: {
+    text: "Solve a 9×9 Sudoku puzzle by modifying the board in-place."
+  },
+  examples: [
+    {
+      input: 'board = [["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]',
+      output: "Solved in-place"
+    }
+  ],
+  constraints: [
+    "board is 9×9",
+    "Each row contains digits 1–9 or '.'"
+  ],
+  starterCode: {
+    javascript: `function solveSudoku(board) {
+  // Write your solution here
+  
+}
+
+// Test case
+let board = [
+  ["5","3",".",".","7",".",".",".","."],
+  ["6",".",".","1","9","5",".",".","."],
+  [".","9","8",".",".",".",".","6","."],
+  ["8",".",".",".","6",".",".",".","3"],
+  ["4",".",".","8",".","3",".",".","1"],
+  ["7",".",".",".","2",".",".",".","6"],
+  [".","6",".",".",".",".","2","8","."],
+  [".",".",".","4","1","9",".",".","5"],
+  [".",".",".",".","8",".",".","7","9"]
+];
+solveSudoku(board);
+console.log(board);`,
+    python: `def solveSudoku(board):
+    # Write your solution here
+    pass
+
+board = [
+  ["5","3",".",".","7",".",".",".","."],
+  ["6",".",".","1","9","5",".",".","."],
+  [".","9","8",".",".",".",".","6","."],
+  ["8",".",".",".","6",".",".",".","3"],
+  ["4",".",".","8",".","3",".",".","1"],
+  ["7",".",".",".","2",".",".",".","6"],
+  [".","6",".",".",".",".","2","8","."],
+  [".",".",".","4","1","9",".",".","5"],
+  [".",".",".",".","8",".",".","7","9"]
+]
+solveSudoku(board)
+print(board)`,
+    java: `import java.util.*;
+
+class Solution {
+    public static void solveSudoku(char[][] board) {
+        // Write your solution here
+        
+    }
+
+    public static void main(String[] args) {
+        char[][] board = {
+          {'5','3','.','.','7','.','.','.','.'},
+          {'6','.','.','1','9','5','.','.','.'},
+          {'.','9','8','.','.','.','.','6','.'},
+          {'8','.','.','.','6','.','.','.','3'},
+          {'4','.','.','8','.','3','.','.','1'},
+          {'7','.','.','.','2','.','.','.','6'},
+          {'.','6','.','.','.','.','2','8','.'},
+          {'.','.','.','4','1','9','.','.','5'},
+          {'.','.','.','.','8','.','.','7','9'}
+        };
+        solveSudoku(board);
+        System.out.println(Arrays.deepToString(board));
+    }
+}`,
+  },
+  expectedOutput: {
+    javascript: "Solved 9x9 board in place",
+    python: "Solved 9x9 board in place",
+    java: "Solved 9x9 board in place",
+  }
+  },
+
+  "shortest-path-visiting-all-nodes": {
+    id: "shortest-path-visiting-all-nodes",
+    title: "Shortest Path Visiting All Nodes",
+    difficulty: "Hard",
+    category: "Graph • Bitmask DP • BFS",
+    description: {
+      text: "Given an undirected, connected graph of n nodes (0..n-1), find the length of the shortest path that visits every node at least once.",
+      notes: [
+        "You may start and stop at any node. You may revisit nodes and edges."
+      ]
+    },
+    examples: [
+      {
+        input: "graph = [[1,2,3],[0],[0],[0]]",
+        output: "4",
+        explanation: "One shortest path is 1->0->2->0->3 (length 4)."
+      },
+      {
+        input: "graph = [[1],[0,2,4],[1,3,4],[2],[1,2]]",
+        output: "4"
+      }
+    ],
+    constraints: [
+      "1 ≤ n = graph.length ≤ 12",
+      "0 ≤ graph[i][j] < n",
+      "Graph is connected"
+    ],
+    starterCode: {
+      javascript: `function shortestPathLength(graph) {
+  // Write your solution here (use BFS + bitmask DP)
+  
+}
+
+// Test cases
+console.log(shortestPathLength([[1,2,3],[0],[0],[0]])); // Expected: 4
+console.log(shortestPathLength([[1],[0,2,4],[1,3,4],[2],[1,2]])); // Expected: 4`,
+      python: `def shortestPathLength(graph):
+    # Write your solution here (BFS + bitmask DP)
+    pass
+
+# Test cases
+print(shortestPathLength([[1,2,3],[0],[0],[0]]))  # Expected: 4
+print(shortestPathLength([[1],[0,2,4],[1,3,4],[2],[1,2]]))  # Expected: 4`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int shortestPathLength(List<List<Integer>> graph) {
+        // Write your solution here (BFS + bitmask DP)
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(shortestPathLength(Arrays.asList(
+          Arrays.asList(1,2,3),
+          Arrays.asList(0),
+          Arrays.asList(0),
+          Arrays.asList(0)
+        ))); // 4
+        System.out.println(shortestPathLength(Arrays.asList(
+          Arrays.asList(1),
+          Arrays.asList(0,2,4),
+          Arrays.asList(1,3,4),
+          Arrays.asList(2),
+          Arrays.asList(1,2)
+        ))); // 4
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "4\n4",
+      python: "4\n4",
+      java: "4\n4",
+    },
+  },
+
+  "word-ladder-ii": {
+    id: "word-ladder-ii",
+    title: "Word Ladder II",
+    difficulty: "Hard",
+    category: "Graph • BFS • Backtracking • DP (reconstruct paths)",
+    description: {
+      text: "Given beginWord, endWord and a wordList, return all shortest transformation sequences from beginWord to endWord. Each step changes exactly one letter and resulting word must be in wordList.",
+      notes: [
+        "Return sequences in any order. If no transformation exists, return an empty list."
+      ]
+    },
+    examples: [
+      {
+        input: 'beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log","cog"]',
+        output: '[["hit","hot","dot","dog","cog"],["hit","hot","lot","log","cog"]]'
+      },
+      {
+        input: 'beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log"]',
+        output: "[]"
+      }
+    ],
+    constraints: [
+      "1 ≤ wordList.length ≤ 5000",
+      "All words have same length ≤ 10",
+      "Lowercase English letters only"
+    ],
+    starterCode: {
+      javascript: `function findLadders(beginWord, endWord, wordList) {
+  // Write your solution here (BFS to build graph of shortest paths, then backtrack)
+  
+}
+
+// Test cases
+console.log(findLadders("hit","cog",["hot","dot","dog","lot","log","cog"])); // Expect two sequences
+console.log(findLadders("hit","cog",["hot","dot","dog","lot","log"])); // Expect: []`,
+      python: `def findLadders(beginWord, endWord, wordList):
+    # Write your solution here (BFS layers + backtrack)
+    pass
+
+# Test cases
+print(findLadders("hit","cog",["hot","dot","dog","lot","log","cog"]))  # Expect two sequences
+print(findLadders("hit","cog',["hot","dot","dog","lot","log"]))  # Expect: []`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
+        // Write your solution here (BFS layers + backtrack)
+        return new ArrayList<>();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(findLadders("hit","cog",Arrays.asList("hot","dot","dog","lot","log","cog")));
+        System.out.println(findLadders("hit","cog",Arrays.asList("hot","dot","dog","lot","log")));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '[["hit","hot","dot","dog","cog"],["hit","hot","lot","log","cog"]]\n[]',
+      python: '[["hit","hot","dot","dog","cog"],["hit","hot","lot","log","cog"]]\n[]',
+      java: '[["hit","hot","dot","dog","cog"],["hit","hot","lot","log","cog"]]\n[]',
+    },
+  },
+  
+  "longest-increasing-path-in-a-matrix": {
+    id: "longest-increasing-path-in-a-matrix",
+    title: "Longest Increasing Path in a Matrix",
+    difficulty: "Hard",
+    category: "Graph • DP • DFS • Topological (DAG)",
+    description: {
+      text: "Given an m x n matrix, return the length of the longest increasing path in the matrix. From each cell you can move in four directions. You may NOT move diagonally or move outside the boundary.",
+      notes: [
+        "Treat cells as nodes in a directed acyclic graph (edges to strictly greater neighbors) and use DFS+memo or topological DP."
+      ]
+    },
+    examples: [
+      {
+        input: "matrix = [[9,9,4],[6,6,8],[2,1,1]]",
+        output: "4",
+        explanation: "Longest increasing path is [1,2,6,9] (length 4)."
+      },
+      {
+        input: "matrix = [[3,4,5],[3,2,6],[2,2,1]]",
+        output: "4",
+        explanation: "One path is [3,4,5,6]."
+      }
+    ],
+    constraints: [
+      "m == matrix.length",
+      "n == matrix[i].length",
+      "1 ≤ m, n ≤ 200",
+      "-2^31 ≤ matrix[i][j] ≤ 2^31 - 1"
+    ],
+    starterCode: {
+      javascript: `function longestIncreasingPath(matrix) {
+  // Write your solution here (DFS + memo or topo)
+  
+}
+
+// Test cases
+console.log(longestIncreasingPath([[9,9,4],[6,6,8],[2,1,1]])); // Expected: 4`,
+      python: `def longestIncreasingPath(matrix):
+    # Write your solution here (DFS + memo)
+    pass
+
+# Test cases
+print(longestIncreasingPath([[9,9,4],[6,6,8],[2,1,1]]))  # Expected: 4`,
+      java: `class Solution {
+    public static int longestIncreasingPath(int[][] matrix) {
+        // Write your solution here (DFS + memo)
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(longestIncreasingPath(new int[][]{
+          {9,9,4},{6,6,8},{2,1,1}
+        })); // 4
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "4",
+      python: "4",
+      java: "4",
+    },
+  },
+
+  "cherry-pickup": {
+    id: "cherry-pickup",
+    title: "Cherry Pickup",
+    difficulty: "Hard",
+    category: "DP • Graph • Grid • DFS",
+    description: {
+      text: "Given an n x n grid of values (0 empty, 1 cherry, -1 thorn), two robots start at (0,0) and must reach (n-1,n-1) then return to (0,0). Maximize cherries collected; thorns block paths.",
+      notes: [
+        "Classic DP reduces two trips to simultaneous traversal (two walkers) with state (r1,c1,r2) or use memoized DFS on combined state."
+      ]
+    },
+    examples: [
+      {
+        input: "grid = [[0,1,-1],[1,0,-1],[1,1,1]]",
+        output: "5",
+        explanation: "Pick path to collect maximum cherries and avoid thorns."
+      }
+    ],
+    constraints: [
+      "n == grid.length",
+      "1 ≤ n ≤ 50",
+      "grid[i][j] ∈ {-1,0,1}"
+    ],
+    starterCode: {
+      javascript: `function cherryPickup(grid) {
+  // Write your solution here (DP with memo on combined positions)
+  
+}
+
+// Test case
+console.log(cherryPickup([[0,1,-1],[1,0,-1],[1,1,1]])); // Expected: 5`,
+      python: `def cherryPickup(grid):
+    # Write your solution here (DP on two walkers)
+    pass
+
+# Test case
+print(cherryPickup([[0,1,-1],[1,0,-1],[1,1,1]]))  # Expected: 5`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int cherryPickup(int[][] grid) {
+        // Write your solution here (DP with memo)
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(cherryPickup(new int[][]{{0,1,-1},{1,0,-1},{1,1,1}})); // 5
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "5",
+      python: "5",
+      java: "5",
+    },
+  },
+
+  "shortest-path-visiting-all-points-with-costs": {
+    id: "shortest-path-visiting-all-points-with-costs",
+    title: "Shortest Path Visiting All Points with Costs (TSP variant)",
+    difficulty: "Hard",
+    category: "Graph • Bitmask DP • TSP",
+    description: {
+      text: "Given n points and a cost matrix/calc function between points, find the minimum cost to visit all points at least once (start anywhere). This is the classical TSP-style bitmask DP on graphs.",
+      notes: [
+        "Use bitmask DP with O(n * 2^n) states. n is small (≤ 15)."
+      ]
+    },
+    examples: [
+      {
+        input: "points = [[0,0],[1,0],[1,1]], cost = manhattan distance",
+        output: "2",
+        explanation: "One optimal sequence visits all with total manhattan cost 2."
+      }
+    ],
+    constraints: [
+      "1 ≤ n ≤ 15 (due to 2^n complexity)",
+      "Costs are non-negative integers"
+    ],
+    starterCode: {
+      javascript: `function tspMinCost(points, costFunc) {
+  // Write your solution here (bitmask DP)
+  // costFunc(i,j) -> non-negative integer cost between i and j
+  
+}
+
+// Example using Manhattan cost
+function manhattan(a,b){ return Math.abs(a[0]-b[0]) + Math.abs(a[1]-b[1]); }
+
+// Test case
+console.log(tspMinCost([[0,0],[1,0],[1,1]], manhattan)); // Expected: 2`,
+      python: `def tspMinCost(points, costFunc):
+    # Write your solution here (bitmask DP)
+    # costFunc(i,j) returns cost between point i and j
+    pass
+
+# Example using Manhattan cost
+def manhattan(a,b): return abs(a[0]-b[0]) + abs(a[1]-b[1])
+
+# Test case
+print(tspMinCost([[0,0],[1,0],[1,1]], manhattan))  # Expected: 2`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int tspMinCost(int[][] points, BiFunction<Integer,Integer,Integer> costFunc) {
+        // Write your solution here (bitmask DP)
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        int[][] pts = {{0,0},{1,0},{1,1}};
+        System.out.println(tspMinCost(pts, (i,j) -> Math.abs(pts[i][0]-pts[j][0]) + Math.abs(pts[i][1]-pts[j][1]))); // 2
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "2",
+      python: "2",
+      java: "2",
     },
   },
 };
