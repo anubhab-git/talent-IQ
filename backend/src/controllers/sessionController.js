@@ -17,7 +17,6 @@ export async function createSession(req, res) {
     // create session in db
     const session = await Session.create({ problem, difficulty, host: userId, callId });
 
-    try { 
     // create stream video call
     await streamClient.video.call("default", callId).getOrCreate({
       data: {
@@ -34,11 +33,6 @@ export async function createSession(req, res) {
     });
 
     await channel.create();
-    } catch (streamError) {
-      // Cleanup: delete session from DB if Stream setup fails
-      await Session.findByIdAndDelete(session._id);
-      throw streamError;
-    }
 
     res.status(201).json({ session });
   } catch (error) {
